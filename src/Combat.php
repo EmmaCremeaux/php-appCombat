@@ -2,22 +2,22 @@
 
 class Combat
 {
-    private $heroero = null;
-    private $monstreonstre = null;
+    private $hero = null;
+    private $monstre = null;
 
-    public function __construct(Hero $heroero, Monstre $monstreonstre)
+    public function __construct(Hero $hero, Monstre $monstre)
     {
-        $this -> hero = $heroero;
-        $this -> monstre = $monstreonstre;
+        $this -> hero = $hero;
+        $this -> monstre = $monstre;
     }
 
     public function getHero(): Hero 
     {
         return $this -> hero;
     }
-    public function setHero(Hero $heroero)
+    public function setHero(Hero $hero): static
     {
-        $this -> hero = $heroero;
+        $this -> hero = $hero;
 
         return $this;
     }
@@ -27,9 +27,9 @@ class Combat
     {
         return $this -> monstre;
     }
-    public function setMonstre(Monstre $monstreonstre)
+    public function setMonstre(Monstre $monstre): static
     {
-        $this -> monstre = $monstreonstre;
+        $this -> monstre = $monstre;
 
         return $this;
     }

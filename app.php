@@ -49,6 +49,6 @@ elseif ($hero -> getVie() > 0) {
     echo "Vous avez gagné \n";
 }
 
-else { // $heroero -> getVie() == 0 
+else { // $hero -> getVie() == 0 
     echo "MWAHAHA Vous avez perdu \n";
 }

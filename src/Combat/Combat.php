@@ -1,5 +1,10 @@
 <?php declare(strict_types = 1);
 
+namespace App\Combat;
+
+use App\Personnage\Hero;
+use App\Personnage\Monstre;
+
 class Combat
 {
     private $hero = null;

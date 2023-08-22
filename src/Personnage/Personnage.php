@@ -4,6 +4,8 @@
 
 // une fonction s'appelle une methode.
 
+namespace App\Personnage;
+
 class Personnage
 {
     protected $vie = 100;

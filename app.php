@@ -1,13 +1,11 @@
 <?php
 
-// l'import de personnage doit arriver avant
-// car monstre et hero dependent de personnage
-require __DIR__.'/src/Personnage.php';
-require __DIR__.'/src/Monstre.php';
-require __DIR__.'/src/Hero.php';
+use App\Personnage\Monstre;
+use App\Personnage\Hero;
+use App\Combat\Combat;
 
-//  la classe combat est composé de classe monstre et hero
-require __DIR__.'/src/Combat.php';
+require __DIR__.'/vendor/autoload.php';
+
 
 $monstre = new Monstre();
 $monstre -> crier();

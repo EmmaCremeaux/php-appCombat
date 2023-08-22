@@ -1,4 +1,5 @@
 <?php
+namespace App\Personnage;
 
 
 class Monstre extends Personnage

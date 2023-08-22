@@ -3,17 +3,17 @@
 namespace App\Combat;
 
 use App\Personnage\Hero;
-use App\Personnage\Monstre;
+use App\Personnage\Ennemi;
 
 class Combat
 {
     private $hero = null;
-    private $monstre = null;
+    private $ennemi = null;
 
-    public function __construct(Hero $hero, Monstre $monstre)
+    public function __construct(Hero $hero, Ennemi $ennemi)
     {
         $this -> hero = $hero;
-        $this -> monstre = $monstre;
+        $this -> ennemi = $ennemi;
     }
 
     public function getHero(): Hero 
@@ -28,13 +28,13 @@ class Combat
     }
 
 
-    public function getMonstre(): Monstre
+    public function getEnnemi(): Ennemi
     {
-        return $this -> monstre;
+        return $this -> ennemi;
     }
-    public function setMonstre(Monstre $monstre): static
+    public function setEnnemi(Ennemi $ennemi): static
     {
-        $this -> monstre = $monstre;
+        $this -> ennemi = $ennemi;
 
         return $this;
     }
@@ -42,8 +42,8 @@ class Combat
 
     public function action()
     {
-        // le monstre attaque
-        $attaque = $this -> monstre -> getPuissance() * random_int(5, 15)/10;
+        // le ennemi attaque
+        $attaque = $this -> ennemi -> getPuissance() * random_int(5, 15)/10;
         $vie = $this -> hero -> getVie() - $attaque;
         $this -> hero -> setVie($vie);
 
@@ -55,12 +55,12 @@ class Combat
         // le heros contre attaque
         $attaque = $this -> hero -> getPuissance() * random_int(5, 15)/10;
         $vie = $this -> hero -> getVie() - $attaque;
-        $this -> monstre -> setVie($vie);
+        $this -> ennemi -> setVie($vie);
     }
 
     public function isFini()
     {
-        if ($this -> hero -> getVie() == 0 || $this -> monstre -> getVie() == 0) {
+        if ($this -> hero -> getVie() == 0 || $this -> ennemi -> getVie() == 0) {
             return true;
         }
 

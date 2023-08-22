@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types = 1);
 // en POO une variable ne s'appelle plus variable mais
 // une propriété/ un attribut/ un membre.
 
@@ -6,7 +6,9 @@
 
 namespace App\Personnage;
 
-class Personnage
+
+// abstract est un mot clé qui empêche que la classe soit instanciée directement
+abstract class Personnage
 {
     protected $vie = 100;
     protected $puissance = 0;

@@ -4,16 +4,28 @@ use App\Personnage\Monstre;
 use App\Personnage\Vampire;
 use App\Personnage\Hero;
 use App\Combat\Combat;
+use App\Decor\Arbre;
 
 
-require __DIR__.'/vendor/autoload.php';
+require __DIR__.'/../vendor/autoload.php';
 
 // attention, la classe personnage est une classe abstaite, 
 // elle ne peux donc pas etre instanciée directement
 // PHP Fatal error:  Uncaught Error: Cannot instantiate abstract class
-// $monstre = new Monstre();
-// $monstre -> crier();
-// echo $monstre -> getPuissance()."\n";
+// $p = new Personnage();
+// $p -> setCri('... !!!')
+//     -> crier()
+// ;
+
+$arbre = new Arbre();
+$arbre 
+    -> setCri('JE S\'APPELLE GROOT !!!')
+    -> crier()
+;
+
+$monstre = new Monstre();
+$monstre -> crier();
+echo $monstre -> getPuissance()."\n";
 
 $vampire = new Vampire();
 $vampire

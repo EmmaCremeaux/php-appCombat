@@ -2,7 +2,7 @@
 
 session_start();
 
-if (($_SESSION['auth'] ?? false) == false) {
+if (($_SESSION['auth'] ?? null) != true) {
     // l'utilisateur n'est pas authentifié
     // on le renvoie a la page de login
     header('LOCATION: login.php', true, 302);

@@ -3,11 +3,13 @@
 session_start();
 
 if (($_POST['password'] ?? '') === '123') {
+    // l'utilisateur a renseigné le bon mot de passe
+    // il est authentifié
     $_SESSION['auth'] = true;
+
+    // on redirige l'utilisateur vers la page privé
     header('LOCATION: private-page.php', true, 302);
     exit();
-} else {
-    $_SESSION['auth'] = false;
 }
 
 ?><!DOCTYPE html>

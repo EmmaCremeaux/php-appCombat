@@ -27,7 +27,13 @@
             <a href="session-get.php">sessionGet</a>
         </li>
         <li>
+            <a href="session-destroy.php">sessionDestroy</a>
+        </li>
+        <li>
             <a href="login.php">login</a>
+        </li>
+        <li>
+            <a href="logout.php">logout</a>
         </li>
     </ul>
 </body>
